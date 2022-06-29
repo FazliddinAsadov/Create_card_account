@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Muli", sans-serif;
+}
+
+section {
+  width: 100%;
+  height: 90vh;
+  background-color: steelblue;
+}
+section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section .container .card {
+  width: 400px;
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-top: 2%;
+}
+
+section .card .container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+section .card h1 {
+  padding-top: 40px;
+  color: #fff;
+  font-size: 32px;
+}
+section .card input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+section input:focus,
+section input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+section .card .btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: lightblue;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+section .card p {
+  color: #fff;
+  font-size: 16px;
+}
+section .card a {
+  color: lightblue;
+  margin: 0 20px;
+  text-decoration: none;
+}
+.backdrop {
+  width: 100%;
+  height: 90vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0%;
+  left: 0;
+  cursor: pointer;
+  display: none;
+  z-index: 1;
+}
+.backdrop.active {
+  display: block;
+}
+form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  margin: 2% 15%;
+  height: 80vh;
+  display: none;
+  z-index: 999;
+  transform: translate(0);
+}
+
+form.active {
+  display: block;
+}
+form .container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+form .create_card {
+  width: 380px;
+  height: 450px;
+  display: flex;
+  flex-flow: column;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  padding: 0 20px;
+}
+
+form .create_card h1 {
+  font-size: 22px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+form .create_card label {
+  font-size: 16px;
+  padding: 10px 0;
+}
+form .create_card input {
+  padding: 5px 0;
+  font-size: 16px;
+  cursor: default;
+}
+form .create_card input:hover {
+  background-color: rgb(249, 249, 242);
+}
+
+form .create_card p {
+  padding: 10px 0;
+  font-size: 16px;
+}
+form .create_card .btn {
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 18px;
+  background-color: lightblue;
+}
+
+.item {
+  width: 100%;
+  height: 100vh;
+}
+.item .cardlar {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.item .card_total {
+  width: 300px;
+  height: 400px;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+.item .card_total .card_top {
+  width: 100%;
+  height: 25vh;
+  background-color: blue;
+  border-bottom-left-radius: 60%;
+  border-bottom-right-radius: 60%;
+  position: relative;
+}
+.card_top .icn_user {
+  font-size: 130px;
+  position: absolute;
+  top: 50px;
+  left: 90px;
+}
+
+.icons_vertical {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+.card_button {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.stars .active {
+  color: gold;
+}
+
+@media only screen and (max-width: 600px) {
+  section .container .card {
+    margin-top: 100px;
+  }
+  form {
+    margin-top: 80px;
+  }
+  form .container {
+    width: 100%;
+    height: 60vh;
+  }
+  form .container .create_card {
+    width: 300px;
+  }
+  .item .card_total {
+    height: 450px;
+  }
+}
